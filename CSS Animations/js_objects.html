@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	var humanBeing = {
+		hungry:true,
+		age:25,
+		height:"5\'10\""
+	}
+	if (humanBeing.hungry = true) {
+		
+	};
+	function btn1(){
+		document.getElementById('hungry').value = humanBeing.hungry;
+	};
+	function btn2(){
+		document.getElementById('age').value = humanBeing.age;
+	};
+	function btn3(){
+		document.getElementById('height').value = humanBeing.height;
+	};
+</script>
+<body>
+	<input type="text" name="" >
+	<select id="hungry">
+		<option>Yes</option>
+		<option>No</option>
+	</select>
+	<button onclick="btn1()">Hungry</button>
+	<input type="text" name="" id="age"><button onclick="btn2()">Age</button>
+	<input type="text" name="" id="height"><button onclick="btn3()">Height</button>
+</body>
+</html>

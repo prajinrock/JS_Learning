@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<script type="text/javascript">
+	function Car(make,model,year){
+		this.make = make;
+		this.model = model;
+		this.year = year;
+	};
+	var car1 = new Car('Honda','Civic', 2005);
+	var car2 = new Car('Suzuki', 'Swift', 2009);
+	function carClk(){
+		document.getElementById('show').innerHTML = car1.model;
+	};
+
+</script>
+<body>
+	<button onclick="carClk();">Creat Car</button>
+	<div id="show"></div>
+</body>
+</html>
