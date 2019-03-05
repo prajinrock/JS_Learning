@@ -14,7 +14,11 @@
 	function carClk(){
 		document.getElementById('show').innerHTML = car1.model;
 	};
-
+	var shoppingList = ['Rice', 'Sugar', 'Salt', 'Ginger', 'Chilly', 'Wheat'];
+	shoppingList.unshift('Crackers');
+	shoppingList.push('Grapes');
+	shoppingList.shift(1);
+	shoppingList.pop(1);
 </script>
 <body>
 	<button onclick="carClk();">Creat Car</button>
