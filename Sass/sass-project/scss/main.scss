@@ -1,3 +1,4 @@
+@import "functions";
 @import "variables";
 @import "mixins";
 @include fancy-links;
@@ -6,29 +7,55 @@
 @include google-font("Titillium+Web");
 
 body {
-  font-family: sans-serif;
+  font-family: $text-font;
+  // background-color: $secondary-color;
   color: $text-color;
-  @media only screen and (max-width:960px){
-  	font-size: 125%;
-  }
-}
+  font-size: em(18px);
+  color: rgb(10, 15, 50);
+  background-color: hsl(60, 50%, 100%);
 
+  @include large-screens { 
+  	font-size: 125%;
+  	max-width: $content-width;
+  } 
+}
+.error{
+	color: red;
+}
+.critical-error{
+	@extend .error;
+	bottom: 1px solid red;
+	font-weight: bold;
+}
 h1, h2, h3, h4 {
   font-family: $headline-font;
 }
 h2{
 	@include large-text;
 }
-p { 
+p {
   font-family: $text-font;
 }
 
 a {
 	color: $link-color;
+	&:hover{
+		color: darken($link-color, 15%);
+	}
 }
 .warning-button{
 	@include warning;
 	padding: 8px 12px;
+}
+.cta-button{
+	@extend .warning-button;
+	@extend .error;
+	@include rounded;
+	font-weight: bold;
+}
+.super-cta-button{
+	@extend .cta-button;
+	font-size: em(20px);
 }
 #header { 
 	@include box($border:1px solid #fff);
@@ -41,6 +68,14 @@ a {
 	}
 	a{
 		color: $menu-item-color;
+		padding: 6px 8px;
+		border-bottom: 1px solid transparentize(#fefefe, 1);
+		transition: border-bottom .5s;
+		transition-timing-function: ease-in-out;
+
+		&:hover{
+			border-bottom: 1px solid opacify(#fefefe, .5);
+		}
 	}
   }
   
@@ -58,13 +93,27 @@ a {
 	margin-left: auto;
 	margin-right: auto;
   #content {
+  	float: left;
+  	width:6*$col;
   }
 
   #sidebar {
+  	float: right;
+  	width: 2*$col;
+
+  	li{
+  		list-style: none;
+  		padding: em(16px) em(20px);
+  		border-bottom:1px dashed #999;
+  		&:hover{
+  			background-color: #efefef;
+  		};
+  	}
   }
 }
 
 #footer {
 	height: $footer-height;
 	background-color: $ternery-color;
+	clear: both;
 }
