@@ -14,7 +14,22 @@
 	function carClk(){
 		document.getElementById('show').innerHTML = car1.model;
 	};
+	var shoppingList = ['Rice', 'Sugar', 'Salt', 'Ginger', 'Chilly', 'Wheat'];
+	shoppingList.unshift('Crackers');
+	shoppingList.push('Grapes');
+	shoppingList.shift(1);
+	shoppingList.pop(1);
 
+	var colors = ['red','orange', 'yellow', 'green', 'blue', 'indigo','violet']
+	var fruits = ['grape','banana', 'apple', 'Guava', 'Kiwi']
+	var drinks = ['pepsi', 'coke', 'fanta', 'thumbs up']
+
+	var mixed = colors.concat(fruits, drinks);
+
+	var cars = ['XUV500', 'Jeep', 'Nexon','Swift', 'Figo', 'Ciaz', 'City', 'Verna']
+	var suv = cars.slice(0,3);
+	var hatchback = cars.slice(3,5);
+	var sedan = cars.slice(-3);
 </script>
 <body>
 	<button onclick="carClk();">Creat Car</button>
