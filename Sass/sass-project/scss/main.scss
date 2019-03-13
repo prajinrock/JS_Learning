@@ -3,26 +3,55 @@
 @import "mixins";
 @include fancy-links;
 
+@for $i from 1 through 6 {
+	.col-#{$i}{
+		width: $i * 2em;
+	}
+}
+$speakers:bob-banker, patty-plume, sandra-smith;
+@each $speaker in $speakers {
+	.#{$speaker}-profile{
+		background-image: url(./img/#{$speaker}.png)
+	}
+}
+
+$font-sizes: (tiny: 8px, small: 11px, medium: 13px, large: 18px);
+@each $name, $size in $font-sizes{
+	.#{$name}{
+		font-size:$size;
+	}
+}
+
+$j: 8;
+@while $j >= 2 {
+	.picture-#{$j}{
+		width : $j * 10%;
+	}
+	$j: $j - 2;
+}
+
 @include google-font("Alegreya+Sans");
 @include google-font("Titillium+Web");
-
-body {
+$contrast: normal; 
+body { 
   font-family: $text-font;
   // background-color: $secondary-color;
+  
   color: $text-color;
   font-size: em(18px);
-  color: rgb(10, 15, 50);
-  background-color: hsl(60, 50%, 100%);
+  color: $text-color;
+  background-color: $body-background-color;
 
   @include large-screens { 
   	font-size: 125%;
   	max-width: $content-width;
-  } 
+  }
 }
 .error{
 	color: red;
 }
-.critical-error{
+
+.critical-error{ 
 	@extend .error;
 	bottom: 1px solid red;
 	font-weight: bold;
@@ -39,10 +68,24 @@ p {
 
 a {
 	color: $link-color;
+	@include blue-beans {
+		color: red;
+	}
 	&:hover{
 		color: darken($link-color, 15%);
 	}
 }
+
+%highlight{
+	font-style: italic;
+}
+
+.sub-title{
+	@extend %highlight;
+	@extend .foo !optional;
+	font-size: em(20px);
+}
+
 .warning-button{
 	@include warning;
 	padding: 8px 12px;
@@ -58,8 +101,8 @@ a {
 	font-size: em(20px);
 }
 #header { 
-	@include box($border:1px solid #fff);
-	@include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
+	@include box($border:1px solid rgba(255,255,255,.4));
+	@include box-shadow(2px 0px 4px rgba(0,0,0,.5), 1px 1px 6px $secondary-color);
 	height: $header-height;
 	background-color: $theme-color;
   #main-menu {
@@ -116,4 +159,7 @@ a {
 	height: $footer-height;
 	background-color: $ternery-color;
 	clear: both;
+	@include rogers-rovers {
+		background-color: #ccc;
+	}
 }

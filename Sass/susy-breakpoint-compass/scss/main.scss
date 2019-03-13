@@ -1,0 +1,17 @@
+@import "normalize";
+@import "susy";
+
+$susy:(
+	columns:16,
+	debug:(image: show)
+);
+.container{
+	height: 100vh;
+	@include container();
+}
+
+.sidebar-left{
+	height: 80vh;
+	background-color: rgba(0,100,100,.6);
+	@include span(2 of 16);
+}
