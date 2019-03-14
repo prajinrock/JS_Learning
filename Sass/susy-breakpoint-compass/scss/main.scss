@@ -15,3 +15,17 @@ $susy:(
 	background-color: rgba(0,100,100,.6);
 	@include span(2 of 16);
 }
+.main{
+	height: 80vh;
+	@include span(10 of 16);
+
+	.content{
+		height: 60vh;
+		background-color: rgba(100,0,0,.6);
+	}
+	.teaser{
+		background-color: rgba(100,30,100,.6);
+		@include span(2 of 10);
+		height: 20vh;
+	}
+}

@@ -471,3 +471,24 @@ textarea {
   float: left;
   margin-right: 1.26582%;
 }
+
+/* line 18, ../scss/main.scss */
+.main {
+  height: 80vh;
+  width: 62.02532%;
+  float: left;
+  margin-right: 1.26582%;
+}
+/* line 22, ../scss/main.scss */
+.main .content {
+  height: 60vh;
+  background-color: rgba(100, 0, 0, 0.6);
+}
+/* line 26, ../scss/main.scss */
+.main .teaser {
+  background-color: rgba(100, 30, 100, 0.6);
+  width: 18.36735%;
+  float: left;
+  margin-right: 2.04082%;
+  height: 20vh;
+}
