@@ -444,10 +444,17 @@ textarea {
   /* 2 */
 }
 
-/* line 8, ../scss/main.scss */
+/* line 21, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/susy-2.2.14/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../scss/main.scss */
 .container {
   height: 100vh;
-  max-width: 100%;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
@@ -455,6 +462,7 @@ textarea {
   background-origin: content-box;
   background-clip: content-box;
   background-position: left top;
+  /*1140px*/
 }
 /* line 12, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/susy-2.2.14/sass/susy/output/support/_clearfix.scss */
 .container:after {
@@ -463,32 +471,61 @@ textarea {
   clear: both;
 }
 
-/* line 13, ../scss/main.scss */
+/* line 16, ../scss/main.scss */
 .sidebar-left {
   height: 80vh;
   background-color: rgba(0, 100, 100, 0.6);
-  width: 11.39241%;
-  float: left;
-  margin-right: 1.26582%;
+  display: none;
+}
+@media (min-width: 720px) {
+  /* line 16, ../scss/main.scss */
+  .sidebar-left {
+    display: block;
+    width: 11.39241%;
+    float: left;
+    margin-right: 1.26582%;
+  }
 }
 
-/* line 18, ../scss/main.scss */
+/* line 26, ../scss/main.scss */
 .main {
   height: 80vh;
   width: 62.02532%;
   float: left;
   margin-right: 1.26582%;
 }
-/* line 22, ../scss/main.scss */
+/* line 30, ../scss/main.scss */
 .main .content {
   height: 60vh;
   background-color: rgba(100, 0, 0, 0.6);
 }
-/* line 26, ../scss/main.scss */
+/* line 34, ../scss/main.scss */
 .main .teaser {
+  height: 20vh;
   background-color: rgba(100, 30, 100, 0.6);
   width: 18.36735%;
   float: left;
   margin-right: 2.04082%;
+  padding: 2.04082%;
+}
+/* line 39, ../scss/main.scss */
+.main .teaser:nth-child(5n) {
+  float: right;
+  margin-right: 0;
+}
+
+/* line 44, ../scss/main.scss */
+.sidebar-right {
+  height: 80vh;
+  background-color: rgba(100, 100, 30, 0.6);
+  width: 24.05063%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 49, ../scss/main.scss */
+.footer {
   height: 20vh;
+  background-color: rgba(0, 30, 100, 0.6);
+  clear: both;
 }
