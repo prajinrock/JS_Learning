@@ -154,4 +154,73 @@ a {
   clear: both;
   background-color: #ccc; }
 
+.flexBox {
+  display: flex; }
+
+.tutorContainer {
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  font-family: 'Montserrat', sans-serif; }
+  .tutorContainer .tCard {
+    width: 33.3333%;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 4px;
+    font-family: 'Montserrat', sans-serif; }
+    .tutorContainer .tCard:nth-child(n) {
+      width: calc(33.3333% - 4px);
+      margin-right: 4px; }
+    .tutorContainer .tCard:nth-child(3n+0) {
+      width: 33.3333%;
+      margin-right: 0px; }
+    .tutorContainer .tCard .selectContainer {
+      width: 100%; }
+    .tutorContainer .tCard .cardWrapper {
+      width: 100%;
+      flex-direction: column; }
+    .tutorContainer .tCard .cardLeft {
+      width: 250px; }
+    .tutorContainer .tCard .cardRight {
+      width: calc(100% - 250px); }
+    .tutorContainer .tCard .flexAlign {
+      flex-direction: column;
+      align-items: center; }
+      .tutorContainer .tCard .flexAlign .userPhoto {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid #f5f5f5;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        .tutorContainer .tCard .flexAlign .userPhoto img {
+          width: 100%; }
+      .tutorContainer .tCard .flexAlign .stars {
+        margin-bottom: 15px; }
+      .tutorContainer .tCard .flexAlign h3 {
+        font-size: 18px;
+        color: #2196f3;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        padding-top: 10px;
+        font-family: 'Montserrat', sans-serif; }
+    .tutorContainer .tCard .buttonBottom {
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 10px;
+      margin-bottom: 15px; }
+      .tutorContainer .tCard .buttonBottom a {
+        font-size: 14px; }
+    .tutorContainer .tCard .cardContent p {
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0px;
+      padding: 0px; }
+      .tutorContainer .tCard .cardContent p span {
+        font-weight: bold; }
+      .tutorContainer .tCard .cardContent p:nth-child(1) {
+        margin-bottom: 15px; }
+
 /*# sourceMappingURL=main.css.map */

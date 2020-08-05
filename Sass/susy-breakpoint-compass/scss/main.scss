@@ -27,5 +27,9 @@ $susy:(
 		background-color: rgba(100,30,100,.6);
 		@include span(2 of 10);
 		height: 20vh;
+
+		$:nth-child(5n){
+			@include last;
+		}
 	}
 }
