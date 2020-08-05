@@ -1,5 +1,5 @@
 require 'susy'
-#require 'breakpoint'
+require 'breakpoint'
 #require 'compass'
 
 preferred_syntax = :scss
